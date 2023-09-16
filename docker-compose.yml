@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: "docker_env"
+      DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
+    depends_on:
+      - db
+    networks:
+      - mynetwork
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:

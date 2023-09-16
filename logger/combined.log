@@ -1,0 +1,31 @@
+{"level":"info","message":"Database synced successfully!","service":"assisto-task"}
+{"level":"info","message":"Server is running on http://:::3000","service":"assisto-task"}
+{"level":"info","message":"Database synced successfully!","service":"assisto-task"}
+{"level":"info","message":"Server is running on http://:::3000","service":"assisto-task"}
+{"level":"warn","message":"User with ID 1 not found","service":"assisto-task"}
+{"level":"warn","message":"User with ID 1 not found","service":"assisto-task"}
+{"level":"info","message":"Database synced successfully!","service":"assisto-task"}
+{"level":"info","message":"Server is running on http://:::3000","service":"assisto-task"}
+{"level":"info","message":"User created: undefined","service":"assisto-task"}
+{"level":"info","message":"Database synced successfully!","service":"assisto-task"}
+{"level":"info","message":"Server is running on http://:::3000","service":"assisto-task"}
+{"level":"info","message":"Database synced successfully!","service":"assisto-task"}
+{"level":"info","message":"Server is running on http://:::3000","service":"assisto-task"}
+{"level":"info","message":"User created: John Doe2","service":"assisto-task"}
+{"level":"info","message":"User found: John Doe2","service":"assisto-task"}
+{"level":"info","message":"Database synced successfully!","service":"assisto-task"}
+{"level":"info","message":"Server is running on http://:::3000","service":"assisto-task"}
+{"level":"info","message":"User created: John Doe2","service":"assisto-task"}
+{"level":"info","message":"User found: John Doe2","service":"assisto-task"}
+{"level":"warn","message":"User with ID 10 not found","service":"assisto-task"}
+{"level":"info","message":"User updated: PANKAJ","service":"assisto-task"}
+{"level":"warn","message":"User with ID 10 not found","service":"assisto-task"}
+{"level":"info","message":"Retrieved 1 users","service":"assisto-task"}
+{"level":"info","message":"Database synced successfully!","service":"assisto-task"}
+{"level":"info","message":"Server is running on http://:::3000","service":"assisto-task"}
+{"level":"info","message":"User created: John Doe2","service":"assisto-task"}
+{"level":"warn","message":"User with ID 10 not found","service":"assisto-task"}
+{"level":"info","message":"User deleted: John Doe2","service":"assisto-task"}
+{"level":"info","message":"Retrieved 0 user","service":"assisto-task"}
+{"level":"info","message":"Database synced successfully!","service":"assisto-task"}
+{"level":"info","message":"Server is running on http://:::3000","service":"assisto-task"}

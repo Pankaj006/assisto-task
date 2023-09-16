@@ -1,0 +1,147 @@
+swagger: '2.0'
+info:
+  title: Your API Documentation
+  version: '1.0.0'
+  description: API documentation for Assisto
+tags:
+  - name: User
+    description: User management
+paths:
+  /api/user/create:
+    post:
+      summary: Create a new user
+      tags:
+        - User
+      x-swagger-router-controller: UserController
+      parameters:
+        - in: body
+          name: newUser
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+          examples:
+            application/json:
+              name: newuser
+              email: newuser@example.com
+              age: 30
+      responses:
+        201:
+          description: User created successfully
+          examples:
+            application/json:
+              id: 1
+              name: newuser
+              email: newuser@example.com
+              age: 30
+        500:
+          description: Internal server error
+  /api/user/getUserById/{userId}:
+    get:
+      summary: Get a user by ID
+      tags:
+        - User
+      x-swagger-router-controller: UserController
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          type: integer
+      responses:
+        200:
+          description: User found
+          examples:
+            application/json:
+              id: 1
+              name: existinguser
+              email: existinguser@example.com
+              age: 25
+        404:
+          description: User not found
+        500:
+          description: Internal server error
+  /api/user/updateUserById/{userId}:
+    put:
+      summary: Update a user by ID
+      tags:
+        - User
+      x-swagger-router-controller: UserController
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          type: integer
+        - in: body
+          name: updatedUserData
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+          examples:
+            application/json:
+              name: updateduser
+              email: updateduser@example.com
+              age: 32
+      responses:
+        200:
+          description: User updated successfully
+          examples:
+            application/json:
+              id: 1
+              name: updateduser
+              email: updateduser@example.com
+              age: 32
+        404:
+          description: User not found
+        500:
+          description: Internal server error
+  /api/user/deleteUserById/{userId}:
+    delete:
+      summary: Delete a user by ID
+      tags:
+        - User
+      x-swagger-router-controller: UserController
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          type: integer
+      responses:
+        200:
+          description: User deleted successfully
+          examples:
+            application/json:
+              message: USER SUCCESSFULLY DELETED!
+        404:
+          description: User not found
+        500:
+          description: Internal server error
+  /api/user/getAllUser:
+    get:
+      summary: Get all users
+      tags:
+        - User
+      x-swagger-router-controller: UserController
+      responses:
+        200:
+          description: List of all users
+          examples:
+            application/json:
+              - id: 1
+                name: user1
+                email: user1@example.com
+                age: 28
+              - id: 2
+                name: user2
+                email: user2@example.com
+                age: 30
+        500:
+          description: Internal server error
+definitions:
+  User:
+    type: object
+    properties:
+      name:
+        type: string
+      email:
+        type: string
+      age:
+        type: integer
